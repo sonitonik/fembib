@@ -14,7 +14,7 @@ class User(Base):
     password_hash = Column(String)
     is_admin = Column(Boolean, default=False)
     confirmed = Column(Boolean, default=False)
-    confirmation_token = Column(String)
+    confirmation_token = Column(Text)
 
     categories = relationship('Category', secondary='user_categories')
     tags = relationship('Tag', secondary='user_tags')

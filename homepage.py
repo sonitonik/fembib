@@ -13,6 +13,12 @@ st.set_page_config(page_title='FemBib', page_icon='📚',
 
 hide_sidebar()
 
+token = st.query_params.get('token')
+if token:
+    if confirm_mail(token):
+        st.success('E-Mail bestätigt. Du kannst Dich jetzt anmelden.')
+    else:
+        st.error('Ungültige E-Mail.')
 
 def load_language(lang):
     with open(f"{lang}.json", encoding = "utf-8") as f:
