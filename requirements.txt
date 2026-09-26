@@ -1,0 +1,7 @@
+streamlit
+sqlalchemy
+bcrypt
+scikit-learn
+psycopg2-binary
+python-dotenv
+numpy

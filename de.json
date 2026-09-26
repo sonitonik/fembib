@@ -1,0 +1,47 @@
+{
+  "login_title": "📚 FemBib - Anmeldung",
+  "login_tab": "Anmelden",
+  "register_tab": "Registrieren",
+
+  "email": "E-Mail",
+  "password": "Passwort",
+  "password_confirm": "Passwort bestätigen",
+  "password_mismatch": "Die Passwörter stimmen nicht überein",
+  "name": "Name",
+
+  "login_button": "🔑 Anmelden",
+  "register_button": "📋 Jetzt registrieren",
+  "login_failed": "Ungültige E-Mail oder Passwort.",
+  "register_success": "Registrierung erfolgreich! Bitte einloggen.",
+
+  "title": "📚 FemBib",
+
+  "recommendations": "📖 Empfehlungen",
+  "my_loans": "📋 Meine Ausleihen",
+  "admin": "⚙️ Admin",
+
+  "logout": "Abmelden",
+  "login": "Anmelden",
+
+  "language": "DE/EN",
+
+  "search_label": "🔍 Suchen...",
+  "search_placeholder": "Suchen...",
+
+  "all_categories": "Alle Kategorien",
+  "all_authors": "Alle Autor:innen",
+  "all_tags": "Alle Tags",
+
+  "available_only": "Verfügbar",
+
+  "results": "Ergebnisse",
+
+  "unknown_author": "Unbekannt",
+
+  "status_available": "✅ Verfügbar",
+  "status_reserved": "🔖 Reserviert",
+  "status_borrowed": "❌ Ausgeliehen",
+
+  "reserve": "🔖 Reservieren",
+  "details": "Details"
+}
