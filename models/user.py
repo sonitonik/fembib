@@ -13,6 +13,8 @@ class User(Base):
     mail = Column(String)
     password_hash = Column(String)
     is_admin = Column(Boolean, default=False)
+    confirmed = Column(Boolean, default=False)
+    confirmation_token = Column(String)
 
     categories = relationship('Category', secondary='user_categories')
     tags = relationship('Tag', secondary='user_tags')
