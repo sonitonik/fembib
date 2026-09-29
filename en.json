@@ -15,7 +15,7 @@
 
   "login_failed": "Invalid email or password.",
   "register_success": "Registration successful! Please log in.",
-  "register_unsuccess": "Registration failed. E-Mail or user already exist", 
+  "register_failure": "Registration failed. E-Mail or user already exist", 
 
   "title": "📚 FemBib",
 
