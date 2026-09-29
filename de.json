@@ -13,6 +13,7 @@
   "register_button": "📋 Jetzt registrieren",
   "login_failed": "Ungültige E-Mail oder Passwort.",
   "register_success": "Registrierung erfolgreich! Bitte einloggen.",
+  "register_unsuccess": "Registrierung fehlgeschlagen. E-Mail oder User vorhanden", 
 
   "title": "📚 FemBib",
 

@@ -14,9 +14,9 @@ def register_user(username, password, mail):
     try:
         #Prüfe ob User:in existiert
         if session.query(User).filter(User.mail == mail).first():
-            return
+            return False
         if session.query(User).filter(User.name == username).first():
-            return
+            return False
 
         #Passwort-Hash
         hashed_password = bcrypt.hashpw(password.encode('utf-8'), 
@@ -31,6 +31,7 @@ def register_user(username, password, mail):
                         confirmation_token = token)
         session.add(new_user)
         session.commit()
+        
 
         confirm_url = f'{APP_URL}/?token={token}'
         body = (

@@ -68,9 +68,11 @@ def show_login():
             if registration_password != registration_password_confirm:
                 st.error(tr('password_missmatch'))
             else:
-                register_user(registration_name, registration_password, 
-                          registration_mail)
-                st.success(tr('register_success'))
+                if register_user(registration_name, registration_password, 
+                          registration_mail) is True:
+                    st.success(tr('register_success'))
+                else:
+                    st.error(tr('register_unsuccess'))
 
 #Header
 col1, col2, col3, col4, col5 = st.columns([5, 2, 2, 1, 1])
