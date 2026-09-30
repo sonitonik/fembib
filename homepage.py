@@ -1,5 +1,5 @@
 import streamlit as st
-from services.auth_service import login, register_user
+from services.auth_service import login, register_user, confirm_mail
 from services.book_service import (get_all_books, search_books, 
                                    get_all_categories, get_all_authors, 
                                    get_all_tags)
