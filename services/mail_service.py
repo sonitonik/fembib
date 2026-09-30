@@ -11,10 +11,17 @@ from sqlalchemy.orm import joinedload
 
 load_dotenv()
 
-SMTP_SERVER = os.getenv("SMTP_SERVER", "")
-SMTP_PORT = int(os.getenv("SMTP_PORT", "1025"))
-SMTP_USER = os.getenv("SMTP_USER", "")
-SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "")
+try:
+    import streamlit as st
+    SMTP_SERVER = st.secrets.get("SMTP_SERVER", os.getenv("SMTP_SERVER", ""))
+    SMTP_PORT = int(st.secrets.get("SMTP_PORT", os.getenv("SMTP_PORT", "587")))
+    SMTP_USER = st.secrets.get("SMTP_USER", os.getenv("SMTP_USER", ""))
+    SMTP_PASSWORD = st.secrets.get("SMTP_PASSWORD", os.getenv("SMTP_PASSWORD", ""))
+except Exception:
+    SMTP_SERVER = os.getenv("SMTP_SERVER", "")
+    SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
+    SMTP_USER = os.getenv("SMTP_USER", "")
+    SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "")
 
 
 def send_mail(to_adress: str, subject: str, body: str):
